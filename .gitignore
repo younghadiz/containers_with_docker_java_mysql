@@ -1,0 +1,25 @@
+# Gradle
+.gradle/
+build/
+
+# Java artifacts
+*.jar
+*.war
+
+# Environment files and secrets
+.env
+*.env
+*.secret
+credentials*
+docker-password.txt
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
