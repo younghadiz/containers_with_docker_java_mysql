@@ -45,7 +45,8 @@
 <script>
   // HOST must be the server IP or DNS name when app running on a server
   // and localhost when running locally
-  const HOST = "localhost";
+  const HOST = "68.183.200.92"; // for the server, replace YOUR_SERVER_IP with the actual IP address or DNS name of the server
+  // const HOST = "localhost";
   
   (async function init() {
     const response = await fetch(`http://${HOST}:8080/get-data`);
