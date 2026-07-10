@@ -1,15 +1,33 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -euo pipefail
 
-apt update
+echo "Updating Ubuntu package index..."
+sudo apt update
 
-apt install -y docker.io docker-compose-plugin git curl vim
+echo "Installing Docker and required packages..."
+sudo apt install -y \
+  docker.io \
+  docker-compose-v2 \
+  git \
+  curl \
+  vim
 
-systemctl enable docker
+echo "Enabling Docker to start automatically..."
+sudo systemctl enable docker
 
-systemctl start docker
+echo "Starting Docker service..."
+sudo systemctl start docker
 
-docker --version
+echo "Adding deployuser to the docker group..."
+sudo usermod -aG docker deployuser
 
-docker compose version 
+echo "Docker version:"
+sudo docker --version
+
+echo "Docker Compose version:"
+sudo docker compose version
+
+echo
+echo "Docker installation completed successfully."
+echo "Log out and reconnect before running Docker without sudo." 
