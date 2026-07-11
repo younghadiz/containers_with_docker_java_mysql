@@ -28,6 +28,11 @@ The project demonstrates:
 
 ## Final Architecture
 
+
+The diagram below shows the complete containerized deployment workflow, from building the Java application locally to publishing the image in Nexus and running the full stack on a DigitalOcean server with Docker Compose.
+
+![Dockerized Java MySQL Architecture](docs/architecture/docker-java-mysql-architecture.png)
+
 ```text
 Developer MacBook
       |
