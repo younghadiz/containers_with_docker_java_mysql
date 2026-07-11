@@ -33,6 +33,9 @@ The diagram below shows the complete containerized deployment workflow, from bui
 
 ![Dockerized Java MySQL Architecture](docs/architecture/docker-java-mysql-architecture.png)
 
+
+## Architecture text structure: 
+
 ```text
 Developer MacBook
       |
@@ -96,7 +99,7 @@ http://YOUR_APPLICATION_SERVER_IP:8083
 
 The Java application is deployed as a Docker container and published through port `8080`.
 
-![Java application running on DigitalOcean](docs/screenshots/application-server.png)
+![Java application running on DigitalOcean](docs/screenshots/application_server.png)
 
 ---
 
@@ -112,7 +115,7 @@ phpMyAdmin is running as a separate container and connects to MySQL through the 
 
 The Java application image was built locally, tagged for the Nexus Docker registry, and published to the private `docker-hosted` repository.
 
-![Java application image stored in Nexus](docs/screenshots/nexus-docker-hosted.png)
+![Java application image stored in Nexus](docs/screenshots/nexus_docker_hosted.png)
 
 ---
 
@@ -120,7 +123,8 @@ The Java application image was built locally, tagged for the Nexus Docker regist
 
 The deployment server successfully returned an HTTP `200 OK` response from phpMyAdmin, confirming that the container and port mapping were working.
 
-![Deployment validation from server terminal](docs/screenshots/deployment-successful.png)
+![Deployment validation from server terminal](docs/screenshots/deployment_successful.png)
+
 
 ---
 
