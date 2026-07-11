@@ -8,6 +8,8 @@ build/
 
 # Environment files and secrets
 .env
+.env.*
+!.env.example
 *.env
 *.secret
 credentials*
@@ -23,3 +25,7 @@ docker-password.txt
 
 # Temporary files
 tmp/
+
+.env
+.env.*
+!.env.example
